@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- 1. LOGIN -->
+      <div id="login" class="card">
+        <h2>Login</h2>
+        <p
+          id="login-err"
+          style="color: red; display: none; margin-bottom: 15px"
+        >
+          Invalid credentials
+        </p>
+        <form id="login-form">
+          <input
+            type="text"
+            id="login-id"
+            placeholder="Username or Email"
+            required
+          />
+          <div class="pass-box">
+            <input
+              type="password"
+              id="login-pass"
+              placeholder="Password"
+              required
+            />
+            <span class="eye-btn">🙈</span>
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+        <p>No account? <a href="#" id="to-reg">Register</a></p>
+      </div>
+
+      <!-- 2. REGISTER -->
+      <div id="reg" class="card" style="display: none">
+        <h2>Register</h2>
+        <form id="reg-form">
+          <input
+            type="text"
+            id="reg-user"
+            placeholder="Username (min 3 chars)"
+            minlength="3"
+            required
+          />
+          <input
+            type="email"
+            id="reg-email"
+            placeholder="Email Address"
+            required
+          />
+          <div class="pass-box">
+            <input
+              type="password"
+              id="reg-pass"
+              placeholder="Password (min 6 chars)"
+              minlength="6"
+              required
+            />
+            <span class="eye-btn">🙈</span>
+          </div>
+          <div class="pass-box">
+            <input
+              type="password"
+              id="reg-cpass"
+              placeholder="Confirm Password"
+              required
+            />
+            <span class="eye-btn">🙈</span>
+          </div>
+          <button type="submit">Register</button>
+        </form>
+        <p>Have account? <a href="#" id="to-login">Login</a></p>
+      </div>
+
+      <!-- 3. DASHBOARD -->
+      <div id="dash" class="card" style="display: none">
+        <h2>Welcome <span id="dash-user"></span>!</h2>
+        <p>Email: <span id="dash-email"></span></p>
+        <h4>You are logged in</h4>
+        <button id="logout">Logout</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

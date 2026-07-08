@@ -5,7 +5,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
   color: #333333;
 }
 
@@ -19,7 +18,7 @@ body {
   background-color: #ffffff;
   border-radius: 6px;
   padding: 25px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(19, 18, 19, 0.6);
   box-sizing: border-box;
 }
 
@@ -41,7 +40,6 @@ input {
 
 input:focus {
   border-color: #1e3c72;
-  outline: none;
 }
 
 /* Password eye positioning */
@@ -59,7 +57,6 @@ input:focus {
   right: 10px;
   top: 8px;
   cursor: pointer;
-  user-select: none;
 }
 
 /* Buttons styling */
